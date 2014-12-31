@@ -16,14 +16,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><a href="http://uvicmakerlab.github.io/507/">Engl507</a></h1>
-        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2014</p>
+        <h1 class="header"><a href="http://jentery.github.io/507/">Engl507</a></h1>
+        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2015</p>
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/zipball/gh-pages">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/tarball/gh-pages">Download TAR</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/blob/gh-pages/syllabus.pdf?raw=true">Download PDF</a></li>
-          <li><a class="buttons github" href="https://github.com/uvicmakerlab/507">GitHub</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/zipball/gh-pages">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/tarball/gh-pages">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/jentery/507">GitHub</a></li>
         </ul>
 
         <p class="header"><a href="description.html">Description</a><br><a href="format.html">Format</a><br><a href="stipulations.html">Stipulations</a><br><a href="objectives.html">Objectives</a><br><a href="assessment.html">Assessment</a><br><a href="policies.html">Policies</a><br><a href="http://www.hastac.org/future-higher-ed" target="_blank">#FutureEd</a></p>
@@ -34,50 +33,53 @@
         <h3>
 <a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Git and GitHub</h3>
 
-<p>Today we will start using Git and GitHub. Git is version control software, and it will allow us to document and share changes to our work, in a shared repository (or "repo"), throughout the semester. So let's get started. (Of note, a chunk of what's below is based on and inspired by this <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1#awesm=~osFD3EZeSedtkJ" target="_blank">excellent introduction</a> by Lauren Orsini.)</p>
+<p>Early in this seminar we will start using Git and GitHub. Git is version control software, and it will allow each of you to document and share changes to your work via a repository (or "repo") throughout the semester. Think of Git as a way of locally tracking the changes you make to a directory (or folder) of files and GitHub as a way of distributing those files and changes. GitHub is also a social network, but you won't be using that feature this semester unless you want to.</p>
+
+<p>So let's get started. (Of note, a chunk of what's below is based on and inspired by Lauren Orsini's <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1#awesm=~osFD3EZeSedtkJ" target="_blank">excellent introduction</a>.)</p>
 <p>
 <uL>
 <li><a href="https://github.com/join" target="_blank">Sign up for GitHub</a> and email me your handle.</li>
-<li>Once I have your handle, I will add you as a contributor (with "push/pull" rights) to <a href="https://github.com/uvicmakerlab/english507" target="_blank">this repository</a>, which is private and not discoverable on the web.</li>
-<li>Now that you a registered, contributing member of our 507 repository, you'll want to locate that <a href="log1.html">keyword log entry</a> you wrote in Markdown. This file will be the core file you'll revise/edit throughout the seminar.</li>
-<li>After you find that file, please change the file name to "yourlastname.md", replacing "yourlastname" with your last name. Of note, do not use a capital letter at the beginning of the file name (sayers, not Sayers). Thanks! Later in this workshop, I'll explain what kind of casing we'll be using for the repository.</li>
-<li>At the top of the file, create a header (using # or h1) that includes your complete name and then (English 507) after it (Jentery Sayers (English 507)). Then create another header (below your name, using ## or h2) that includes the following info: log entry number, date, and (if you wish) a title that describes the content (Log 1, 13 January, My Response to Galloway). As you add content throughout the semester, please make sure that the most recent content is at the top of the file (that is, in descending or reverse chronological order). All headers for log entries should use ## or h2. If you use additional headers within those entries, then you might want to consider using ### or h3.</li>
-<li>With a file named "yourlastname.md", your name at the top of that file's content, and your completed keyword entry, you should be ready to start using Git to version your contributions to our GitHub repo. Think of Git as a way of locally tracking the changes you make to a directory (or folder) of files and GitHub as a way of sharing those files and changes with the balance of the seminar. GitHub is also a social network, but you won't be using that feature this semester unless you want to.</li>
-<li><a href="http://git-scm.com/downloads" target="_blank">Download Git</a> and install it.</li>
+<li>Once you are signed in to GitHub, visit your GitHub profile page (github.com/yourHandle) and click the plus button in the top right to create a new repository. Give the repository a simple name (e.g., english507 or 507) and a brief description. Decide whether you want it public or private (I'd default to private for now, even if that means you'll have to give folks such as me read or write access), but don't check that "Initialize this repository with a README" box. Once you're ready, click "Create respository" (green button at the bottom).</li>
+<li>Once you have a handle and a repo, <a href="http://git-scm.com/downloads" target="_blank">download Git</a> and install it.</li>
 <li>Once it is downloaded and installed, you should start the Git Bash app (Windows) or open your terminal (Mac). On a Mac, the terminal is a default app. Just use your spotlight to find it.</li>
-<li>For your reference, here are a few commands that you will likely use throughout the semester:<ul>
+<li>For your reference, here are a few commands that you will likely use in the command line throughout the semester:<ul>
 <li><code>git help</code> (lists popular Git commands; handy!)</li>
 <li><code>git config</code> (configure Git)</li>
-<li><code>git clone</code> (clone all files in a repo; you'll likely just do this once)</li>
+<li><code>git clone</code> (clone all files in a remote repo)</li>
 <li><code>git add</code> (add file contents to the index)</li>
-<li><code>git commit</code> (record chagnes to the repository)</li>
+<li><code>git commit</code> (record changes to the repository)</li>
 <li><code>git diff</code> (show changes between commits and the repository's "working tree")</li>
 <li><code>git fetch</code> (download objects and refs from another repository)</li>
 <li><code>git grep</code> (print lines matching a pattern)</li>
+<li><code>git init</code> (initialize a Git repo)</li>
 <li><code>git log</code> (create an empty Git repo or reinitialize one)</li>
 <li><code>git mv</code> (move or rename a file or directory)</li>
-<li><code>git pull</code> (fetch from and merge with another repository)</li>
+<li><code>git remote</code> (confirm or add a remote repo, such as a GitHub repo)
+<li><code>git pull</code> (fetch from and merge with another repo)</li>
 <li><code>git push</code> (update remote refs along with associated objects)</li>
-<li><code>git rm</code> (remove files from the working tree and from the index</li>
+<li><code>git rm</code> (remove files from the working tree and from the index)</li>
 <li><code>git status</code> (show the status of the working tree)</li> 
 <li><code>cd</code> (change the directory; not specific to Git)</li>
-<li><code>touch</code> (create a file; not specific to Git)</li></ul>
-<li>In Git, please write the following command: <code>git config --global user.name "Your Name"</code>. Replace "Your Name" with your name as you would like it to appear in the metadata for your contributions to our GitHub repo. When tracking changes, Git attributes each change to a particular name/identity, no matter how small the change.</li>
+<li><code>touch</code> (create a file; not specific to Git)</li>
+<li><code>ls</code> (list the contents of the current directory)</li></ul>
+<li>In the command line, move to your desktop's directory: <code>cd ~/desktop</code>. Just in case you're curious, <code>cd</code> stands for "change directory," and the use of <code>~/</code> means the repo is located at the top level of your computer's file structure.</li>
+<li>In the command line, please write the following command: <code>git config --global user.name "Your Name"</code>. Replace "Your Name" with your name as you would like it to appear in your attribution metadata. When tracking changes, Git attributes each change to a particular name/identity, no matter how small the change.</li>
 <li>Now enter the following: <code>git config --global user.email "emailaddress@email.ca"</code></a>. Replace "emailaddress@email.ca" with the email address you registered with GitHub. Note: this is very important. Make sure you don't enter the wrong address.</li> 
-<li>Next, you will "clone" our English 507 repo, which is currently on the web: <code>git clone https://github.com/uvicmakerlab/english507</code>. You should then be prompted for your GitHub handle and password (because the repo is not public). This command will not execute if you are not connected to the internet.</li>
-<li>At this point, we want to make sure we navigate to our new, cloned directory. In the command line, type <code>cd ~/english507</code>. Just in case you're curious, <code>cd</code> stands for "change directory," and the use of <code>~/</code> means the repo is located at the top level of your computer's file structure.</li>
-<li>To make sure you've initialized the directory (telling your machine to recognize it as a Git repo), enter <code>git init</code>.</li>
-<li>Now we'll start adding content to the repo. Please note: throughout the semester, we'll be using CamelCase for formatting purposes, meaning compound words or phrases will be joined with capital letters, without the use of spaces (jenterySayers, not Jentery Sayers). Also, all file names and directories should start with lower case letters (sayers, not Sayers).</li> 
-<li>In the command line, enter <code>touch yourlastname/yourlastname.md</code>, replacing "yourlastname" with your last name. The first "yourlastname" is the subdirectory, which will be dedicated to your work throughout the semester. Keep in mind that your last name will not start with a capital letter. Also, if your last name consists of two or more words, then they should be joined, without spaces, using capital letters (vanNielsen).</li>
-<li>You should now have an empty file, yourlastname.md, in your subdirectory. Using a text editor, go ahead and either replace it (through a drag and drop) with your existing yourlastname.md file (see above) or copy and paste all content from your existing yourlastname.md file into it. If you do the latter, then just make sure you save the file (command+S or control+S) after you paste content into it.</li>
-<li>Since we've added content to the repo, we'll want to bring Git's attention to it. In the command line, write <code>git add ~/english507/yourlastname/yourlastname.md</code>, replacing "yourlastname" with your last name. Of course, if you want Git to watch in the entire directory (instead of a single file), then you can just write <code>git add ~/english507</code>.</li>
-<li>Now that we've altered the repo, we'll also want to "commit" changes to it. A commit is a bundle of changes, or just one change, which you deem significant enough to document in the repo's revision history. In the command line, write <code>git commit -m "First commit of yourlastname.md. My first commit"</code>, replacing "yourlastname" with your last name. The use of <code>-m</code> adds a message to the revision history, describing what changes were made. These messages become informative over time, especially if you are collaborating with other people.</li>
-<li>The next step? We'll want to make sure that your local repo is synced with our online repo, which is housed with GitHub. In the command line, first enter <code>git remote -v</code>. This verifies the repo to which you are connected. If the result is not our 507 repo, or you get an error, then set the repo using <code>git remote add origin https://github.com/uvicmakerlab/english507.git</code>. That will properly establish your remote repo (at GitHub).</li>
-<li>Once your origin repo is established, "push" your changes using the following command: <code>git push origin master</code>. If the command is successful, then you should get a list of changes in the command line. You can also check <a href="https://github.com/uvicmakerlab/english507" target="_blank">our repo</a> to verify your changes are there. If they are not, then wait at least ten to fifteen minutes before you get concerned. There's the occasional lag.</li>
-<li>As you proceed throughout the semester, you may need to periodically remind Git to watch your English 507 repo or particular files in it. To do so, just use <code>git add ~/english507</code> to "stage" your revisions prior to committing them. Once they are staged, you can commit changes using <code>git commit</code> and push them to GitHub using <code>git push origin master</code>.</li>  
-<li>When you return to the repo (to edit it or add material to it), consider "pulling" all changes from our GitHub repo down to your local machine using <code>git pull https://github.com/uvicmakerlab/english507</code>. This command will sync your local repo with our repo with GitHub. If no differences exist, then it will tell you your repo's already up-to-date.</li>
-</ul></p>
-<p>That's it for now! You can of course do much, much more with Git and GitHub, but during the first few weeks of seminar we'll keep it simple. Get in touch with any questions or concerns you have.</p> 
+<li>Next, create a repository for your English 507 writing and research: <code>git init directory</code>. Replace "directory" with the name you gave to your GitHub repo (e.g., english507 or 507). Of note, if you use more than one word, then I recommend camel caps, where you use caps instead of spaces in your directory names (e.g., englishRepo or jenterySayers). I also recommend refraining from capitalizing the first word of your repo (e.g., jentery not Jentery). Among other things, spaces in repo or file names can cause a lot of problems down the line.</li>
+<li>At this point, you should have a folder sitting on your desktop. And you should now move into it: <code>cd directory</code> (where "directory" is the name of your new repo). To confirm your location, enter <code>pwd</code>, or "print working directory." The command line will respond with your location.</li>
+<li>Now we'll start adding content to the repo. In the command line, enter <code>touch yourlastname.md</code>, replacing "yourlastname" with your last name. Keep in mind that your last name will not start with a capital letter. Also, if your last name consists of two or more words, then they should be joined, without spaces, using capital letters (vanNielsen).</li>
+<li>You should now have an empty file, yourlastname.md, in your directory. This will be the file for your 507 research log. Open it using <code>open yourlastname.md</code>. The default application for editing Markdown files on your computer should open, and you should see the empty file.</li>
+<li>At the top of the file, create a header (using #) that includes your complete name and then (English 507) after it (e.g., Jentery Sayers (English 507)). Then create another header (below your name, using ##) that includes the following info: log entry number, date, and (if you wish) a title that describes the content (e.g., Log 1, 13 January, My Response to Galloway). As you add content to your research log throughout the semester, please make sure that the most recent content is at the top of the file (that is, in descending or reverse chronological order). All headers for log entries should use ##. If you use additional headers within those entries, then you might want to consider using ###.</li>
+<li>Once you've added some sample content, save yourlastname.md (either control+S or command+S). Git will track this change and add it to your change history.</li>
+<li>Now return the command line, enter <code>touch readMe.md</code>, and then <code>open readMe.md</code>. This file will describe your repository. Add whatever description you wish, save it, and then enter <code>ls</code> in the command line. You should receive a list of all files (just two?) in your current directory.</li>
+<li>Now let's sync your two files with your English 507 repo at GitHub. In the command line, enter <code>git remote add 507 https://github.com/yourHandle/yourRepo.git</code>. Replace "yourHandle" with your GitHub handle and "yourRepo" with the name of your GitHub repo. Don't forget <code>.git</code> at the end. Of note, <code>507</code> is just a name for the URL that follows it; it's shorthand. Feel free to replace it with whatever shorthand you'd prefer. It's arbitrary, really. Go with something you'll remember or make you smile.</li>
+<li>Now confirm that you are syncing to the appropriate repo: <code>git remote -v</code>. It should spit back the URL of your English 507 GitHub repo.</li>
+<li>Before syncing the content, let's bring Git's attention to the changes you've made to your local repo. In the command line, write <code>git add --all</code>. This adds or "stages" all of your changes to the repo.</li>
+<li>But staging the changes doesn't "commit" them to the repo. A commit is a bundle of changes, or just one change, which you deem significant enough to document or record in the repo's change history. In the command line, write <code>git commit -m "First commit of yourlastname.md and readMe.md."</code>, replacing "yourlastname" with your last name. The use of <code>-m</code> adds a message to the change history, describing what changes were made (giving these changes some metadata, if you will). These messages become informative over time, especially if you are collaborating with other people. They are also a way of integrating core textual studies practices into your own writing and research.</li>
+<li>Now "push" your changes to your GitHub repo using the following command: <code>git push 507 master</code>. If you didn't use <code>507</code> as the shorthand for your repo, then use whatever shorthand you did use. If the command is successful, then you should get a list of changes in the command line. You can also check your GitHub repo to verify your changes are there. If they are not, then wait at least ten to fifteen minutes before you get concerned. There's the occasional lag.</li>
+<li>As you change your local repo throughout the semester, just remember to use the <code>git add --all</code>, <code>git commit -m "message"</code>, and <code>git push 507 master</code> commands to sync them with your GitHub repo. One perk of this approach is that you don't write in the cloud. Another is that you're backing up and sharing your work (if you wish) as you go. And another is that you start with a change history of your work (rather than thinking about it later or cooking it up after the fact).</li>
+<li>Also, as you proceed, you may want to create subdirectories in your local repo. To do so, enter <code>mkdir subdirectoryName</code> in the command line, replacing "subdirectoryName" with your preference (e.g., "images"). There you can dump or create files, such as image and data files, that are relevant to your research and writing.</li></ul></p>
+<p>That's it for now! You can of course do much, much more with Git and GitHub, but during the first few weeks of seminar we'll keep it simple. Get in touch with any questions or concerns.</p> 
 </p></section>
       <footer>
         
@@ -90,7 +92,7 @@
           </script>
           <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);    ga(&#39;create&#39;, &#39;UA-46858077-1&#39;, &#39;uvicmakerlab.github.io&#39;);   ga(&#39;send&#39;, &#39;pageview&#39;);  &lt;/script&gt;");
+              var pageTracker = _gat._getTracker("&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);    ga(&#39;create&#39;, &#39;UA-46858077-1&#39;, &#39;jentery.github.io&#39;);   ga(&#39;send&#39;, &#39;pageview&#39;);  &lt;/script&gt;");
             pageTracker._trackPageview();
             } catch(err) {}
           </script>

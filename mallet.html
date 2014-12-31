@@ -16,14 +16,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><a href="http://uvicmakerlab.github.io/507/">Engl507</a></h1>
-        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2014</p>
+        <h1 class="header"><a href="http://jentery.github.io/507/">Engl507</a></h1>
+        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2015</p>
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/zipball/gh-pages">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/tarball/gh-pages">Download TAR</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/blob/gh-pages/syllabus.pdf?raw=true">Download PDF</a></li>
-          <li><a class="buttons github" href="https://github.com/uvicmakerlab/507">GitHub</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/zipball/gh-pages">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/tarball/gh-pages">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/jentery/507">GitHub</a></li>
         </ul>
 
         <p class="header"><a href="description.html">Description</a><br><a href="format.html">Format</a><br><a href="stipulations.html">Stipulations</a><br><a href="objectives.html">Objectives</a><br><a href="assessment.html">Assessment</a><br><a href="policies.html">Policies</a><br><a href="http://www.hastac.org/future-higher-ed" target="_blank">#FutureEd</a></p>
@@ -39,12 +38,7 @@
 <p>To get started with MALLET and Latent Dirichlet Allocation topic modeling, we're going to use <a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">this tool</a>. However, for extensive use, I recommend using the <a href="http://mallet.cs.umass.edu/quick-start.php" target="_blank">command line</a>.</p>
 
 <p>A few things to consider when using MALLET:<ul>
-<li>Borrowing from <a href="http://mlg.eng.cam.ac.uk/creed/Notes/lda-tutorial-reed.pdf" target="_blank">Colorado Reed</a>, "a topic is a probability distribution over a collection of words
-and a topic model is a formal statistical relationship between a group of observed and
-latent (unknown) random variables that specifies a probabilistic procedure to generate
-the topics—<em>a generative model</em>. The central goal of a topic is to provide a 'thematic
-summary' of a collection of documents. In other words, it answers the question: what
-themes are these documents discussing?" (2).</li>
+<li>Borrowing from <a href="http://mlg.eng.cam.ac.uk/creed/Notes/lda-tutorial-reed.pdf" target="_blank">Colorado Reed</a>, "a topic is a probability distribution over a collection of words and a topic model is a formal statistical relationship between a group of observed and latent (unknown) random variables that specifies a probabilistic procedure to generate the topics—<em>a generative model</em>. The central goal of a topic is to provide a 'thematic summary' of a collection of documents. In other words, it answers the question: what themes are these documents discussing?" (2).</li>
 <li>MALLET relies on Latent Dirichlet Allocation (LDA), which is probably the most popular topic model across the disciplines. The model describes how documents (or bags of words) obtain their words. In so doing, it makes no assumptions about the order in which the words appear in a given document (Reed 2-3). What's more, you can create documents based on your own preferences. For instance, a document could be a paragraph in a novel, or it could be an entire novel. That said, it's important to interpret models across the topics they generate. In the case of MALLET, a cluster of words is only meaningful in relation to the other clusters that are identified. Avoid isolating specific topics as if they emerged independently from the balance.</li>  
 <li>This particular tool outputs MALLET results in both CSV (for spreadsheets) and HTML (for browsers). You should them both, as they provide different information and inform each other, through different structures/formats.</li>
 <li>When using the tool, it is important to run the algorithm several times, changing the number of preferred topics  and iterations. Also consider running it with and without stopwords (even if the results with stopwords will seem banal or obvious). This way, you can test for consistency (or interesting anomalies), and you iteratively develop the model, seeing what congeals across trials.</li>
@@ -63,6 +57,7 @@ themes are these documents discussing?" (2).</li>
 <li>Blei, <a href="http://journalofdigitalhumanities.org/2-1/topic-modeling-and-digital-humanities-by-david-m-blei/" target="_blank">"Topic Modeling and Digital Humanities"</a></li>
 <li>Nelson, <a href="http://dsl.richmond.edu/dispatch/pages/home" target="_blank">"Mining the <em>Dispatch</em>"</a></li>
 <li>Blevins, <a href="http://historying.org/2010/04/01/topic-modeling-martha-ballards-diary/" target="_blank">"Topic Modeling Martha Ballard’s Diary"</a></li>
+<li>Rhody, <a href="http://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody/" target="_blank">"Topic Modeling and Figurative Language"</a> (+ the <a href="http://journalofdigitalhumanities.org/2-1/topic-model-data-for-topic-modeling-and-figurative-language-by-lisa-m-rhody/" target="_blank">data</a>)</li>
 </ul></p>
  </section>
       <footer>

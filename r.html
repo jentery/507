@@ -16,14 +16,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><a href="http://uvicmakerlab.github.io/507/">Engl507</a></h1>
-        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2014</p>
+        <h1 class="header"><a href="http://jentery.github.io/507/">Engl507</a></h1>
+        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2015</p>
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/zipball/gh-pages">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/tarball/gh-pages">Download TAR</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/blob/gh-pages/syllabus.pdf?raw=true">Download PDF</a></li>
-          <li><a class="buttons github" href="https://github.com/uvicmakerlab/507">GitHub</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/zipball/gh-pages">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/tarball/gh-pages">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/jentery/507">GitHub</a></li>
         </ul>
 
         <p class="header"><a href="description.html">Description</a><br><a href="format.html">Format</a><br><a href="stipulations.html">Stipulations</a><br><a href="objectives.html">Objectives</a><br><a href="assessment.html">Assessment</a><br><a href="policies.html">Policies</a><br><a href="http://www.hastac.org/future-higher-ed" target="_blank">#FutureEd</a></p>
@@ -85,7 +84,7 @@ For consistency's sake, remove all punctuation from the "woolf" corpus.
 Remove stopwords for the English language.
 <pre><code>woolf <- tm_map(woolf,removeWords, stopwords('english'))</code></pre></p>
 
-<p>But hey! Now matter how common, words like totally matter. So let's stop and make our third basic observation: <strong>When conducting text analysis and other procedural analyses, review the stopword list and keep it available for reference.</strong> Additionally, when writing essays that employ text analysis and the use of stopwords, consider including, attaching, or referencing your stopword list. You should also mention whether you <a href="http://en.wikipedia.org/wiki/Stemming" target="_blank">stemmed</a>, depunctuated, decased, or otherwise modified the text.</p>
+<p>But hey! No matter how common, words like totally matter. So let's stop and make our third basic observation: <strong>When conducting text analysis and other procedural analyses, review the stopword list and keep it available for reference.</strong> Additionally, when writing essays that employ text analysis and the use of stopwords, consider including, attaching, or referencing your stopword list. You should also mention whether you <a href="http://en.wikipedia.org/wiki/Stemming" target="_blank">stemmed</a>, depunctuated, decased, or otherwise modified the text.</p>
 <p>Fortunately, in R we can see the "tm" package's stopword list for English by entering this command:<pre><code>stopwords(kind="en")</pre></code> Whew.</p>
 <p>Now that we've "treated" <em>The Waves</em> for procedural analysis, we'll learn from Forster and create a "Document-Term Matrix" (DTM) for our corpus called "woolf". In this instance, a DTM based on <em>The Waves</em> is a rectangular array of words arranged in rows and columns, which together describe the frequency of terms occurring in our six TXT files. In our DTM, rows will correspond with TXT files (or documents) in the collection, and columns will correspond with words.</p>
 <p>Here's a good time to make our fourth basic observation: <strong>The use of software programming languages and environments like R to generate, treat, examine, and express document-term matrices and other arrays is not simply an analysis of texts. It is the performative transformation (or deformation) of texts.</strong> In a sense, it is comparable to reading backwards, often with the hope of generating unpredictable or surprising results, which are premised on brushing against the very "senses of the text" (Samuels and McGann 36). To put it bluntly: we are changing the text, not just interpreting it.</p>
