@@ -37,6 +37,8 @@
 
 <p>To get started with MALLET and Latent Dirichlet Allocation topic modeling, we're going to use <a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">this tool</a>. However, for extensive use, I recommend using the <a href="http://mallet.cs.umass.edu/quick-start.php" target="_blank">command line</a>.</p>
 
+<p>If you need a corpus of texts for MALLET, then I recommend using a subdirectory or two from this <a href="https://dl.dropbox.com/u/4713959/JDH%20article/19cTexts.zip" target="_blank">.zip corpus of 19 c. texts</a>, complied and corrected (using a period-specific spell checker as well as automated OCR correction) by Jordan Sellers and Ted Underwood. (Thanks, Jordan and Ted!) The zip file is somewhat large; give it a bit to download. You might also want to refrain from running the entire corpus through MALLET, especially if you are using a laptop.</p>
+
 <p>A few things to consider when using MALLET:<ul>
 <li>Borrowing from <a href="http://mlg.eng.cam.ac.uk/creed/Notes/lda-tutorial-reed.pdf" target="_blank">Colorado Reed</a>, "a topic is a probability distribution over a collection of words and a topic model is a formal statistical relationship between a group of observed and latent (unknown) random variables that specifies a probabilistic procedure to generate the topics—<em>a generative model</em>. The central goal of a topic is to provide a 'thematic summary' of a collection of documents. In other words, it answers the question: what themes are these documents discussing?" (2).</li>
 <li>MALLET relies on Latent Dirichlet Allocation (LDA), which is probably the most popular topic model across the disciplines. The model describes how documents (or bags of words) obtain their words. In so doing, it makes no assumptions about the order in which the words appear in a given document (Reed 2-3). What's more, you can create documents based on your own preferences. For instance, a document could be a paragraph in a novel, or it could be an entire novel. That said, it's important to interpret models across the topics they generate. In the case of MALLET, a cluster of words is only meaningful in relation to the other clusters that are identified. Avoid isolating specific topics as if they emerged independently from the balance.</li>  
@@ -48,8 +50,10 @@
  
 <p>Some other resources for MALLET and topic modelling:<ul>
 <li>Posner, <a href="http://miriamposner.com/blog/very-basic-strategies-for-interpreting-results-from-the-topic-modeling-tool/" target="_blank">"Very Basic Strategies for Interpreting Results from the Topic Modeling Tool"</a></li>
+<li>Chang, Jonathan et al. <a href="http://papers.nips.cc/paper/3700-reading-tea-leaves-how-humans-interpret-topic-models.pdf" target="_blank">“Reading Tea Laves: How Humans Interpret Topic Models”</a></li>
 <li>Graham, Weingart, and Milligan, <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet" target="_blank">"Getting Started with Topic Modeling and MALLET"</a></li>
 <li>Underwood, <a href="http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/" target="_blank">"Topic Modeling Made Just Simple Enough"</a></li> 
+<li>Underwood, <a href="http://tedunderwood.com/2012/08/14/where-to-start-with-text-mining/" target="_blank">"Where to Start with Text Mining"</a></li>
 <li>Schmidt, <a href="http://sappingattention.blogspot.ca/2011/11/compare-and-contrast.html" target="_blank">"Compare and Contrast"</a></li> 
 <li>Schmidt, <a href="http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html" target="_blank">"When You Have a MALLET, Everything Looks Like a Nail"</a></li>
 <li>Weingart, <a href="http://www.scottbot.net/HIAL/?p=19113" target="_blank">"Topic Modeling for Humanists: A Guided Tour"</a></li>
