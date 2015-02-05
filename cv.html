@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Notes: English 507 at the University of Victoria</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="http://jentery.github.io/507/">Engl507</a></h1>
+        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2015</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/zipball/gh-pages">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jentery/507/tarball/gh-pages">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/jentery/507">GitHub</a></li>
+        </ul>
+
+        <p class="header"><a href="description.html">Description</a><br><a href="format.html">Format</a><br><a href="stipulations.html">Stipulations</a><br><a href="objectives.html">Objectives</a><br><a href="assessment.html">Assessment</a><br><a href="policies.html">Policies</a><br><a href="http://www.hastac.org/future-higher-ed" target="_blank">#FutureEd</a></p>
+
+
+      </header>
+      <section>
+        <h3>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>OpenCV and Image Archives</h3>
+
+
+<p>Computer vision is the programmatic description and reconstruction of the physical world in digital form <a href="http://szeliski.org/Book/" target="_blank">(see Szeliski 2010)</a>. Aside from Optical Character Recognition (OCR), one of its most popular applications is face recognition. (Here, you might think of iPhoto, Facebook, or Kinect, each of which identifies faces.) Face detection algorithms analyze patterns to calculate a core or integral image within an image. They also assess differences across a spectrum of light, and view images across scales (Szeliski 2010, 5-10). In the open course community, you see practitioners combining programming languages such as Python, C++, and Java with the Open Source Computer Vision (OpenCV) library and frameworks that train classifiers to detect aspects of images based on cascades of features. In particular, OpenCV uses the Viola-Jones detection framework to scan images and identify the same face (or other feature) across a distributions of images, even when multiple faces appear in a single image.</p>
+
+<p>Most OpenCV developers are not familiar with the intricacies of the frameworks, including the Viola-Jones framework, they use to scan images. As such, they rely upon trusted and readily available cascades (such as "Frontal Face," "Human Body," "Wall Clock," and "Mouth") saved as XML files. Once a feature is detected, it can also be extracted (or cropped) from the original and archived. Extracted features may also be compared with similar features <a href="http://ejohn.org/research/computer-vision-photo-archives/" target="_blank">(see Resig 2013)</a>. When comparing faces, multiple photos of the same person can be used to train algorithms to recognize an “eigenface” (or “unique face”) generated from the principle components of the images. Eigenfaces do not actually exist in any lived reality. However, they are fundamental to face recognition, and datasets with “training face” images are now common.</p>
+
+<p>For our purposes, we'll refrain from training any algorithms. But, if you'd like, then you can use this <a href="https://github.com/jentery/modfaces" target="_blank"><code>modfaces</code></a> repo to identify and crop faces in the <a href="http://beinecke.library.yale.edu/collections/highlights/picturing-literary-modernism" target="_blank">Beinecke's "Picturing Literary Modernism" exhibit</a>. This repo combines the Python 2 programming language with the OpenCV library and is a fork of Terence Eden's <a href="https://github.com/edent/Tate-Hack" target="_blank">Tate Hack</a>.</p>
+
+<p>To use the repo to its fullest extent, you will need to install NumPy, Python, and OpenCV on your computer. In all three of the Python scripts found in the <a href="https://github.com/jentery/modfaces" target="_blank">repo</a>, you'll see <code>import cv2</code>. Without OpenCV, the scripts won't run. In two of the scripts, you'll also see <code>import numpy as np</code>. These two scripts help you train an algorithm to see a face or faces. That said, you don't need NumPy if you just want to use an existing cascade to find features in an archive. Or, to put it another way, in this case you only need NumPY if you want to train OpenCV to find a new face (e.g., your own or a face from historical materials).</p>
+
+<p>Visit <a href="http://docs.scipy.org/doc/numpy/user/install.html" target="_blank"><code>http://docs.scipy.org/doc/numpy/user/install.html</code></a> to download NumPy 1.9 for Windows or OSX. Visit <a href="https://www.python.org/downloads/" target="_blank"><code>https://www.python.org/downloads/</code></a> to download Python 2.7 (not Python 3.4) for Windows or OSX. Then visit <a href="http://opencv.org/downloads.html" target="_blank"><code>http://opencv.org/downloads.html</code></a> to download OpenCV 2.4 (not OpenCV 3.0) for Windows or OSX. If you are an OSX user, then you might find <a href="http://www.jeffreythompson.org/blog/2013/08/22/update-installing-opencv-on-mac-mountain-lion/" target="_blank">this piece</a> helpful for working with Python and OpenCV. If you're a Windows user, then you might find <a href="http://docs.opencv.org/trunk/doc/py_tutorials/py_setup/py_setup_in_windows/py_setup_in_windows.html" target="_blank">this piece</a> helpful for the same purpose. In general, <a href="http://docs.opencv.org/trunk/doc/py_tutorials/py_tutorials.html" target="_blank">these tutorials</a> are quite helpful, even if/when combining OpenCV with Python can be tricky, confusing, or frustrating.</p>
+
+<p>Once you have Python 2.7 and OpenCV 2.4 installed (with or without NumPy), then you can clone the <code>modfaces</code> repo to your desktop: <code>git clone https://github.com/jentery/modfaces.git</code>. Once it's cloned, you'll need to change your directory to <code>modfaces</code> and run the following command: <code>python downloadface.py face.xml</code>. In the command line, you'll see the script printing its results as it scans the <a href="http://beinecke.library.yale.edu/collections/highlights/picturing-literary-modernism" target="_blank">"Picturing Literary Modernism" exhibit</a>, responding with <code>Found 0 face!</code>, <code>Found 1 face!</code>, and so on. In short, the <a href="https://github.com/jentery/modfaces/blob/master/downloadface.py" target="_blank"><code>downloadface.py</code></a> script will read the paths/URLs listed in <a href="https://github.com/jentery/modfaces/blob/master/all.txt" target="_blank"><code>all.txt</code></a> using the "trusted" frontal face cascades stored in <a href="https://github.com/jentery/modfaces/blob/master/face.xml" target="_blank"><code>face.xml</code></a>. When there's a match, the face/feature is cropped from the source image, and the cropped images are saved as JPGs in the <code>detected</code> subdirectory of the <code>modfaces</code> repo on your local machine. When I run the script on my machine, I get 18 cropped images from "Picturing Literary Modernism," in JPG format.</p>
+
+<p>If you want to run this script on another archive, then simply change the URLs in <code>all.txt</code>. When you do, be sure that the URLs end with an image format (JPG, PNG), not HTML, PHP, or the like. Ideally, you know of or can find a metadata file, finding aid, or open data set with image URLs. That way, you don't have to enter them manually. ALternatively, you can list drop your images into your local <code>modfaces</code> folder and list the file names your <code>all.txt</code> file. If you want to train the algorithm to find a particular face in an image archive, then I recommend consulting <a href="https://shkspr.mobi/blog/2014/06/which-painting-do-you-look-like-comparing-faces-using-python-and-opencv/" target="_blank">Eden's write up</a> and following the steps there.</p>
+
+<p>Since this process is on the complicated side, let me know if you need help installing Python, OpenCV, and NumPy or running the scripts in the <code>modfaces</code> repo. I'm happy to help. Thanks!</p>
+
+ </section>
+      <footer>
+        
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);    ga(&#39;create&#39;, &#39;UA-46858077-1&#39;, &#39;jentery.github.io&#39;);   ga(&#39;send&#39;, &#39;pageview&#39;);  &lt;/script&gt;");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
