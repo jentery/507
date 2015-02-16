@@ -81,7 +81,7 @@ With each of these commands, we are asking the computer to isolate a particular 
 
 <p>Ultimately, then, you'll install two packages beyond R and RStudio's default set: "tm" for text mining and "SnowballC" for stemming.</p>
 <p>Now, in your R console, type what Forster recommends (or you can just highlight the content of each text box and paste it into R; each box below represents a single command): <br><br>
-Call the tm (text mining) package in R.<pre><code>library("tm")</pre></code>Create a "corpus" called "woolf" based on the "woolf" repo of six files currently on your desktop.
+Call the tm (text mining) package in R.<pre><code>library ("tm")</pre></code>Create a "corpus" called "woolf" based on the "woolf" repo of six files currently on your desktop.
 <pre><code>woolf <- Corpus(DirSource('woolf/'))</pre></code>
 
 For consistency's sake, make all text characters in the "woolf" corpus lower case.
@@ -94,7 +94,7 @@ Remove stopwords for the English language.
 <pre><code>woolf <- tm_map(woolf,removeWords, stopwords('english'))</code></pre></p>
 
 <p>But hey! No matter how common, words like totally matter. So let's stop and make our third basic observation: <strong>When conducting text analysis and other procedural analyses, review the stopword list and keep it available for reference.</strong> Additionally, when writing essays that employ text analysis and the use of stopwords, consider including, attaching, or referencing your stopword list. You should also mention whether you <a href="http://en.wikipedia.org/wiki/Stemming" target="_blank">stemmed</a>, depunctuated, decased, or otherwise modified the text.</p>
-<p>Fortunately, in R we can see the "tm" package's stopword list for English by entering this command:<pre><code>stopwords(kind="en")</pre></code> Whew.</p>
+<p>Fortunately, in R we can see the "tm" package's stopword list for English by entering this command:<pre><code>stopwords (kind="en")</pre></code> Whew.</p>
 <p>Now that we've "treated" <em>The Waves</em> for procedural analysis, we'll learn from Forster and create a "Document-Term Matrix" (DTM) for our corpus called "woolf". In this instance, a DTM based on <em>The Waves</em> is a rectangular array of words arranged in rows and columns, which together describe the frequency of terms occurring in our six TXT files. In our DTM, rows will correspond with TXT files (or documents) in the collection, and columns will correspond with words.</p>
 <p>Here's a good time to make our fourth basic observation: <strong>The use of software programming languages and environments like R to generate, treat, examine, and express document-term matrices and other arrays is not simply an analysis of texts. It is the performative transformation (or deformation) of texts.</strong> In a sense, it is comparable to reading backwards, often with the hope of generating unpredictable or surprising results, which are premised on brushing against the very "senses of the text" (Samuels and McGann 36). To put it bluntly: we are changing the text, not just interpreting it.</p>
 <p>So let's create that DTM in the R console, using tf-idf like Ramsay and Forster do:<pre><code>dtm <- DocumentTermMatrix(woolf, control=list(weighting=weightTfIdf))</code></pre></p> 
