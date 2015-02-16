@@ -69,10 +69,19 @@ With each of these commands, we are asking the computer to isolate a particular 
 <p>Given the issues above, for the balance of this workshop, we'll use Forster's pruned iteration of the <em>The Waves</em>, which he so kindly shared with us. (Thanks, Chris!) This will save us at least 90 minutes of editing and should remind us to share our research "data" whenever possible.</p>
 <p>For the tf-idf analysis of <em>The Waves</em>, we're going to turn to R, which (in my experience) is most transparent when rendered through RStudio. That said, please run RStudio on your machine.</p>
 <p>In RStudio, we'll work in the console. There, start with "get working directory," or <pre><code>getwd()</pre></code> This is identical to <code>pwd</code> in your terminal. But odds are that you wil not be on your desktop. Instead, you'll be in your home directory (something like "admin" or whatever user name you've given your computer.) So let's change your location using "set working directory to my desktop," or (for example)<br><br> <pre><code>setwd("Desktop")</code></pre> Now type<br><br><pre><code>getwd()</pre></code> again just to make sure you're on your desktop.</p>
-<p>Next we're going to follow Forster's instructions line by line and make an R "corpus" based on the six pruned TXT files (one for each speaker in <em>The Waves</em>) he provided us. We'll start by installing the "tm" (or <a href="http://cran.r-project.org/web/packages/tm/index.html" target="_blank">"text mining"</a>) package in RStudio. In the bottom-right window, click the "Packages" tab, then "Install Packages," and then type "tm" into the search field. Click on the "tm" result and then press "Install" (leave the "Install Dependencies" box checked, too). The package should install rather quickly, and I encourage you to install other packages (including visualization packages as well as the "stylo" package for stylometry) for work you'll do on your own.</p>
-<p>After you've installed the "tm" package, repeat the step above and install <a href="http://cran.r-project.org/web/packages/SnowballC/index.html" target="_blank">"SnowballC,"</a> which is a stemming algorithm. Ultimately, then, you're installing two packages beyond R and RStudio's default set.</p>
+<p>Next we're going to follow Forster's instructions line by line and make an R "corpus" based on the six pruned TXT files (one for each speaker in <em>The Waves</em>) he provided us. We'll start by installing the "tm" (or <a href="http://cran.r-project.org/web/packages/tm/index.html" target="_blank">"text mining"</a>) package in RStudio.</p>
+
+<p>In the console, write: 
+<pre><code>install.packages ("tm")</code></pre></p>
+
+<p>Or you can use another approach for installations. In the bottom-right window, click the "Packages" tab, then "Install Packages," and then type "tm" into the search field. Click on the "tm" result and then press "Install" (leave the "Install Dependencies" box checked, too). The package should install rather quickly, and I encourage you to install other packages (including visualization packages as well as the "stylo" package for stylometry) for work you'll do on your own.</p>
+<p>After you've installed the "tm" package, repeat the step above and install <a href="http://cran.r-project.org/web/packages/SnowballC/index.html" target="_blank">"SnowballC,"</a> which is a stemming algorithm. Or, in the console, write: 
+
+<pre><code>install.packages ("SnowballC")</code></pre></p> 
+
+<p>Ultimately, then, you'll install two packages beyond R and RStudio's default set: "tm" for text mining and "SnowballC" for stemming.</p>
 <p>Now, in your R console, type what Forster recommends (or you can just highlight the content of each text box and paste it into R; each box below represents a single command): <br><br>
-Call the tm (text mining) package in R.<pre><code>library('tm')</pre></code>Create a "corpus" called "woolf" based on the "woolf" repo of six files currently on your desktop.
+Call the tm (text mining) package in R.<pre><code>library("tm")</pre></code>Create a "corpus" called "woolf" based on the "woolf" repo of six files currently on your desktop.
 <pre><code>woolf <- Corpus(DirSource('woolf/'))</pre></code>
 
 For consistency's sake, make all text characters in the "woolf" corpus lower case.
